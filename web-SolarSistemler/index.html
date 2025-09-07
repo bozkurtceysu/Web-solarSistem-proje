@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/jpg" href="images/solarlogo2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Londrina+Outline&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <title>Solar Sistemler</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 0;
+            padding: 0 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+
+        }
+
+         html {
+            scroll-behavior: smooth;
+
+        }
+
+        .slider-hero {
+            display: flex;
+            position: relative;
+            text-align: center;
+            margin: 20px 0;
+            gap: 10px;
+            color: white;
+        }
+        .slider {
+            width: 60%;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .slides {
+            width: 400%;
+            display: flex;
+            height: 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+        .slides img {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+
+
+
+        .slider-hero-content {
+            display: flex;
+            position: relative;
+            background: linear-gradient(33deg, rgba(89, 74, 10, 1.000) 0.000%, rgba(159, 92, 13, 1.000) 16.667%, rgba(227, 118, 18, 1.000) 33.333%, rgba(255, 150, 24, 1.000) 50.000%, rgba(255, 188, 31, 1.000) 66.667%, rgba(255, 230, 39, 1.000) 83.333%, rgba(255, 255, 47, 0.4) 100.000%);
+            border-radius: 20px;
+            padding: 20px;
+            z-index: 1;
+            flex-direction: column;
+            align-items: center;
+            height: 300px;
+            width: 40%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        }
+
+        .slider-hero-content h2 {
+            font-size: 25px;
+            font-weight: bolder;
+            line-height: 1.6;
+            display: inline-block;
+            white-space: nowrap;
+            color: white;
+            overflow-wrap: break-word;
+            background-color: #ff590057;
+            top: 20%;
+            position: absolute;
+            border-radius: 25px;
+            padding: 15px;
+
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+
+        .menu-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+        .logo-image {
+            width: 120px;
+            height: auto;
+
+        }
+
+        .site-title {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2.5em;
+            color: #333;
+            /* white-space: nowrap; */
+            position: absolute;
+            left: 120px;
+
+        }
+
+        #nav-menu ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            height: auto;
+
+        }
+
+        #nav-menu ul li {
+            display: flex;
+            padding: 10px;
+
+        }
+
+        #nav-menu ul li a {
+            text-decoration: none;
+            color: #111010;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+
+        }
+
+        #nav-menu a:hover {
+            color: #ff5900e1;
+            transition: 0.2s;
+
+        }
+
+
+        .hero {
+            width: 100%;
+            height: 65vh;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: url('arkaplansolar2.png');
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+
+
+        .btn-secondRow {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(to right, orange, #ff5900);
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            width: 50%;
+            text-align: center;
+            margin-bottom: 35px;
+            white-space: nowrap;
+
+
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 0;
+            background: linear-gradient(to right, orange, #ff5900);
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            width: 60%;
+            height: 15%;
+            text-align: center;
+            position: absolute;
+            bottom: 10%;
+            left: 25%;
+            white-space: nowrap;
+
+
+
+        }
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .component-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .component-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .component-image-kablolama {
+            max-width: 75%;
+            height: auto;
+            margin-bottom: 10px;
+
+        }
+
+        .component-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0b0b0b;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+
+        .component-description {
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+
+        .second-component-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-bottom: 1px solid black;
+            gap: 40px;
+            margin-top: 25px;
+        }
+
+        .second-component-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .second-component-item.component-description {
+            font-size: 20px;
+            text-align: left;
+
+        }
+
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 18px;
+            white-space: nowrap;
+
+        }
+
+        .section-text {
+            font-size: 20px;
+            color: #262424;
+            margin-bottom: 20px;
+            max-width: 800px;
+
+        }
+
+        .system-subsection {
+            margin-bottom: 30px;
+
+        }
+
+        .system-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0e0e0e;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .system-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+
+        }
+
+        .system-text {
+            flex: 1;
+            font-size: 1.2em;
+            color: #151414;
+            text-align: left;
+            margin-top: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .system-image {
+            flex: 1;
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            z-index: 1;
+            border-radius: 5px;
+            top: 100%;
+            right: 10px;
+
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 14px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            overflow: auto;
+            white-space: nowrap;
+
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: #ff5900e1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown a i {
+            position: absolute;
+            margin-left: 5px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        window.onload = function () {
+            document.getElementById("hakkinda_").scrollIntoView({ behavior: 'smooth' });
+        }
+
+    </script>
+
+    <header class="menu-header">
+
+        <a href="index.html"><img src="solarlogo2.jpg" alt="Solar Sistemler Logo" class="logo-image"></a>
+
+        <h1 class="site-title">Solar Sistemler</h1>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#anasayfa">ANASAYFA</a></li>
+                <li><a href="#hakkinda">HAKKINDA</a></li>
+
+                <li class="dropdown">
+                    <a style="margin-right: 10px;" href="#sistemler">SİSTEMLER <i class="bi bi-caret-down-fill"></i></a>
+
+                    <div class="dropdown-content">
+                        <a href="#on-grid">Fotovoltaik (PV) Sistemler</a>
+                        <a href="#termalsystems">Güneş Termal Sistemler</a>
+                    </div>
+
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slider-hero">
+        <div class="slider" id="anasayfa">
+            <div class="slides">
+                <img src="solarslider7.jpeg" alt="Güneş Enerjisi Slider 1">
+                <img src="solarslider9.jpeg" alt="Güneş Enerjisi Slider 2">
+                <img src="solarslider12.jpeg" alt="Güneş Enerjisi Slider 3">
+                <img src="slidersolarrr.jpeg" alt="Güneş Enerjisi Slider 4">
+            </div>
+
+        </div>
+
+        <div class="slider-hero-content">
+            <a href="#hakkinda" class="btn">Güneş Enerjisini Keşfet</a>
+            <h2 class="londrina-shadow-regular">Gezegenimiz için sürdürülebilir bir gelecek:<br> GÜNEŞ ENERJİSİ</h2>
+        </div>
+    </div>
+
+
+
+    <div class="hero" id="hakkinda_">
+    </div>
+
+
+
+    <section style="padding: 30px 20px;  max-width: 1100px; margin: auto; border-bottom: 1px solid black;"
+        id="hakkinda">
+        <h1 style="font-size: 40px; margin-bottom: -8px;">Solar Sistemler</h1>
+        <p style="font-size: 20px; line-height: 1.4; color: #0f0e0e;">
+            Güneş enerjisi, Güneş’in çekirdeğinde meydana gelen nükleer füzyon süreciyle ortaya çıkan ve uzaya
+            yayılan
+            ışık ve ısı enerjisidir.
+            Bu enerji, yeryüzündeki yaşamın ana kaynağıdır ve aynı zamanda teknolojik sistemler aracılığıyla
+            insanlığın
+            enerji ihtiyacını karşılamak için de kullanılır.
+            Güneş enerjisi sistemleri, Güneş’ten gelen ışığı ve ısıyı kullanarak elektrik veya ısı enerjisine
+            dönüştüren
+            teknolojik çözümlerdir.
+            Bu sistemlerin temel amacı, sonsuz ve temiz bir enerji kaynağı olan güneşi kullanarak, fosil yakıtlara
+            olan
+            bağımlılığı azaltmak
+            ve çevresel sürdürülebilirliğe katkıda bulunmaktır.
+        </p>
+
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+            <img src="images/gunes-enerjisi-umut-grup-2-1.jpeg" alt="Solar Sistem"
+                style="width: 100%; max-width: 500px; border-radius: 8px;">
+            <img src="images/günesenerjisi1.jpeg" alt="Solar Panel"
+                style="width: 100%; max-width: 500px; border-radius: 8px;">
+        </div>
+
+        <p style="font-size: 20px;"><strong>Güneş enerjisi sistemleri, temel olarak enerjiyi toplama ve kullanma
+                şekillerine göre iki ana kategoriye ayrılır:</strong></p>
+
+        <ul style="list-style: none; padding: 0;">
+            <li style="font-size: larger;"><strong>Fotovoltaik (PV) Sistemler</strong> </li>
+            <li style="font-size: larger; padding: 5px;"><a style="text-decoration: none; color: #151414 ; "
+                    href="#on-grid">Şebekeye Bağımlı (On-Grid) Sistemler</a></li>
+            <li style="font-size: larger; padding: 5px;"><a style="text-decoration: none; color: #151414;"
+                    href="#off-grid">Şebekeden Bağımsız (Off-Grid) Sistemler</a></li>
+            <li style="font-size: larger; padding: 5px;"><a style="text-decoration: none; color: #151414;"
+                    href="#hibritsystems">Hibrit Sistemler</a></li>
+        </ul>
+
+        <ul style="list-style: none; padding: 0;">
+            <li style="font-size: larger; "><strong>Güneş Termal Sistemler</strong> </li>
+
+        </ul>
+    </section>
+
+
+
+    <div class="container">
+
+        <h2 class="section-title">Öncelikle eksiksiz bir güneş enerjisi sistemini oluşturan ana bileşenlere bakalım.
+        </h2>
+
+        <div class="component-grid">
+            <div class="component-item">
+                <img src="images/gunessiz-gunlerde-yagmur-damlalarindan-enerji-toplayan-gunes-paneli-gelistirildi-1527017687.png"
+                    alt="Güneş Panelleri" class="component-image">
+                <h3 class="component-title">Güneş Panelleri:</h3>
+                <p class="component-description">Sistemin en temel ve en belirgin parçasıdır. Fotovoltaik
+                    hücrelerden oluşur. Fotovoltaik hücreler güneş ışığını doğrudan doğru akım (DC) elektrik enerjisine
+                    dönüştürme görevini üstlenir.Güneş paneli, üzerine gelen güneş ışığını emmeye yarayan solar
+                    hücrelerden oluşur. Bir güneş panelinin verimi, kullanıldığı hücrenin güneş ışığını elektriğe
+                    dönüştürme oranı ile belirlenir.</p>
+            </div>
+
+            <div class="component-item">
+                <img src="images/tam-sinus-akilli-inverter-ne-ise-yarar.jpg" alt="İnvertör" class="component-image">
+                <h3 class="component-title">İnvertör (Evirici):</h3>
+                <p class="component-description">Sistemin en kritik bileşenlerinden biridir. Güneş panellerinden gelen
+                    doğru akımı (DC), evlerimizde ve iş yerlerimizde kullandığımız alternatif akıma (AC) dönüştürür. Bu
+                    dönüşüm olmadan, üretilen elektrik enerjisi elektronik cihazları çalıştırmak için kullanılamaz.
+                </p>
+            </div>
+
+            <div class="component-item">
+                <img src="images/akübatarya.jpeg" alt="Batarya" class="component-image">
+                <h3 class="component-title">Batarya (Akü) Grubu:</h3>
+                <p class="component-description">Her sistemde bulunması zorunlu değildir. Gündüz saatlerinde
+                    üretilen fazla elektriği depolar. Güneşin olmadığı zamanlarda bu depolanmış enerjiyi kullanarak
+                    elektrik sağlar.</p>
+            </div>
+
+        </div>
+
+        <div class="second-component-grid">
+            <div class="second-component-item">
+                <img style="width: 80%; height: 60%;" src="images/gunes-paneli-montaj-sistemi.jpeg"
+                    alt="Montaj-Taşıyıcı Sistemler" class="component-image">
+                <h3 class="component-title">Montaj ve Taşıyıcı Sistemler:</h3>
+                <p class="component-description">Güneş panellerinin çatıya, araziye veya cepheye güvenli bir şekilde
+                    monte edilmesini sağlar.Solar panellerin yerinde kalmasını, çevresel koşullara dayanmasını ve enerji
+                    emilimi için optimum açılarda kalmasını sağlarlar. Bu sistemler, hem konut hem de ticari solar
+                    kurulumlar için çok önemlidir.</p>
+
+            </div>
+
+            <div class="second-component-item">
+                <img src="images/solar-sistem-koruma-panosu-5000w-10000w-kcm79917507-1-88375431331e4835b25d88c812c2fad7.jpg"
+                    alt="Kablolama-Koruma Ekipman" class="component-image-kablolama">
+                <h3 class="component-title">Kablolama ve Koruma Ekipmanları:</h3>
+                <p class="component-description">Sistem içindeki tüm bileşenler arasında elektrik akımını
+                    taşır.Devre kesiciler, sigortalar gibi koruma ekipmanları, sistemi aşırı gerilim ve kısa devre gibi
+                    risklere karşı korur.</p>
+            </div>
+            <a href="#sistemler" class="btn-secondRow">Solar Sistemleri İncele</a>
+        </div>
+    </div>
+
+
+    <div class="container" id="sistemler">
+        <h2 class="section-title" id="on-grid">1. Fotovoltaik (PV) Sistemler</h2>
+        <p class="section-text">
+            Güneş ışığını doğrudan elektrik enerjisine dönüştüren bu sistemler, güneş panelleri aracılığıyla
+            "fotovoltaik etki" adı verilen bir süreçle doğru akım (DC) üretir. Bu enerji, daha sonra evlerde ve iş
+            yerlerinde kullanılabilmesi için alternatif akıma (AC) dönüştürülür. Fotovoltaik sistemler, kurulum
+            amaçlarına göre kendi içinde de farklılaşır:
+        </p>
+
+        <div class="system-subsection">
+            <h3 class="system-header">- Şebekeye Bağlı (On-Grid) Sistemler</h3>
+            <div class="system-content">
+                <p class="system-text">
+                    Doğrudan elektrik şebekesine entegre çalışır. Üretilen enerji, öncelikli olarak konutun veya
+                    işletmenin kendi ihtiyacını karşılar. Fazla enerji, şebekeye satılırken, ihtiyaç duyulduğunda
+                    şebekeden enerji alınabilir. Bu sistemler, özellikle kentsel alanlarda ve elektrik şebekesinin
+                    mevcut olduğu yerlerde yaygın olarak kullanılır.
+                </p>
+                <img src="images/on-grid-sistem-1.webp" alt="On-Grid Sistem" class="system-image">
+            </div>
+        </div>
+
+        <div class="system-subsection" id="off-grid">
+            <h3 class="system-header">- Şebekeden Bağımsız (Off-Grid) Sistemler</h3>
+            <div class="system-content">
+                <p class="system-text">
+                    Elektrik şebekesinin ulaşmadığı kırsal bölgeler, karavanlar veya tekneler gibi yerler için
+                    idealdir.
+                    Bu sistemler, üretilen enerjiyi bataryalarda depolar ve bu sayede elektrik kesintilerinden
+                    etkilenmeden sürekli enerji sağlar.Bir diğer adına <b>akülü sistemler</b> diyebiliriz
+                </p>
+                <img src="images/off-grid-sistem-nasil-calisir.jpg.webp" alt="Off-Grid Sistem" class="system-image">
+            </div>
+        </div>
+
+        <div class="system-subsection" id="hibritsystems">
+            <h3 class="system-header">- Hibrit Sistemler</h3>
+            <div class="system-content">
+                <p class="system-text">
+                    Hem <b>şebekeye bağlı</b> olma hem de <b>batarya ile depolama</b> özelliklerini bir araya
+                    getiren
+                    hibrit sistemler, kullanıcılara maksimum esneklik sunar. Elektrik kesintisi durumlarında yedek
+                    güç
+                    kaynağı olarak bataryaları kullanırken, günlük enerji ihtiyacını şebeke ile dengeleyebilir.Basit
+                    bir
+                    ifadeyle, aküler ile desteklenmiş şebekeye bağlı güneş enerjisi sistemi olarak tanımlanabilir.
+                </p>
+                <img src="images/hibrit-solar-sistem-nasil-calisir.jpg.webp" alt="Hibrit Sistem" class="system-image">
+            </div>
+
+            <h2 class="section-title">2. Termal Güneş Enerji Sistemleri (Solar Thermal)</h2>
+            <div class="system-content" id="termalsystems">
+                <p class="system-text">
+                    Güneşten gelen ışınımı <b>ısı enerjisine</b> dönüştüren sistemlerdir.Elektrik üretmez, doğrudan
+                    <b>ısı</b> üretir.Fotovoltaik (PV) panellerin aksine, bu sistemler güneş ışığını doğrudan elektrik
+                    enerjisine değil, ısıya dönüştürerek çalışır.En yaygın kullanım alanı <b>su ısıtmadır</b>.Evsel
+                    Sıcak Su
+                    Sistemleri,Merkezi Isıtma Sistemleri,Endüstriyel Proses Isıtması gibi alanlarda kullanılır
+                </p>
+                <img src="shutterstock_192039461-scaled.jpg" alt="Termal Güneş Enerji Sistemi" class="system-image">
+            </div>
+
+
+        </div>
+
+
+        <script>
+            const slides = document.querySelector('.slides');
+            const slideCount = document.querySelectorAll('.slides img').length;
+            let index = 0;
+
+            function nextSlide() {
+                index++;
+                if (index >= slideCount) {
+                    index = 0;
+                }
+                slides.style.transform = `translateX(-${index * (100 / slideCount)}%)`;
+            }
+            setInterval(nextSlide, 4000); 
+
+        </script>
+
+
+
+</body>
+
+</html>
